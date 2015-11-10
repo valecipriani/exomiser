@@ -18,7 +18,7 @@
 
 set -u
 set -x
-scriptname="merge_chrVCF"
+scriptname="merge_VCF_byindv"
 mkdir -p ${scriptname}.qsub.out ${scriptname}.qsub.err
 exec >${scriptname}.qsub.out/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.out 2>${scriptname}.qsub.err/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.err
 
