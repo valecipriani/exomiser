@@ -18,6 +18,7 @@
 
 # Run the program
 
+
 vincsoftw=/cluster/project8/vyp/vincent/Software
 valesoftw=/cluster/project8/vyp/valentina/software
 java=/share/apps/jdk1.7.0_71/bin/java
@@ -43,8 +44,7 @@ disease=Sorsby
 # --prioritiser <name> Name of the prioritiser used to score the genes. Can be one of: hiphive, exomewalker, phenix, phive or uber-pheno. e.g. --prioritiser=uber-pheno
 
 # --keep-off-target <true/false>, default is true; Keep the off-target variants that are normally removed by default.
-# These are defined as intergenic, intronic, upstream, downstream or intronic ncRNA variants. 
-
+# These are defined as intergenic, intronic, upstream, downstream or intronic ncRNA variants.  
 # --remove-dbsnp <true/false> 
 
 if [[ "$pedigree" == "FALSE" ]]; then
