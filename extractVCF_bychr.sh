@@ -36,7 +36,7 @@ vcftools=/cluster/project8/vyp/vincent/Software/vcftools_0.1.12a/bin/vcftools
 # sample=IoO_FFS_batch4_LC13186
 # sample=IoO_FFS_batch4_XH13849
 
-for sample in `cat ${outfolder}/NCMDsamples.txt`; do 
+for sample in `cat ${outfolder}/SampleList.txt`; do 
 
 	${vcftools} --gzvcf ${infile} --recode --indv ${sample} --out ${outfolder}/${uclex_release}_${sample}_chr${f} 
 	${vcftools} --vcf ${outfolder}/${uclex_release}_${sample}_chr${f}.recode.vcf --non-ref-ac 1 --recode --out ${outfolder}/${uclex_release}_${sample}_chr${f}_clean
