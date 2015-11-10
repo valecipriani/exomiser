@@ -18,7 +18,7 @@
 
 set -u
 set -x
-scriptname="merge_singleVCF_latestcalls_bychrom"
+scriptname="merge_chrVCF"
 mkdir -p ${scriptname}.qsub.out ${scriptname}.qsub.err
 exec >${scriptname}.qsub.out/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.out 2>${scriptname}.qsub.err/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.err
 
