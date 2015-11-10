@@ -8,7 +8,7 @@
 #$ -P vyp
 
 # Set the name of the job
-#$ -N mergeindv
+#$ -N mergeVCF
 
 # Set the working directory 
 #$ -cwd
@@ -18,7 +18,7 @@
 
 set -u
 set -x
-scriptname="merge_VCF_byindv"
+scriptname="mergeVCF_byindv"
 mkdir -p ${scriptname}.qsub.out ${scriptname}.qsub.err
 exec >${scriptname}.qsub.out/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.out 2>${scriptname}.qsub.err/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.err
 
