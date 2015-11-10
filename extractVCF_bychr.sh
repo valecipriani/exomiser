@@ -27,8 +27,8 @@ exec >${scriptname}.qsub.out/${scriptname}_${SGE_TASK_ID}_${JOB_ID}.out 2>${scri
 args=( header 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X )
 f=${args[$SGE_TASK_ID]}
 
-uclex_release=mainset_September2015
-infile=/scratch2/vyp-scratch2/vincent/GATK/${uclex_release}/${uclex_release}_chr${f}.vcf.gz
+uclex_release=mainset_November2015
+infile=/scratch2/vyp-scratch2/vincent/GATK/${uclex_release}/${uclex_release}_chr${f}_filtered.vcf
 outfolder=/goon2/scratch2/vyp-scratch2/Cipriani_IoO/GATK/data/latestcalls
 
 vcftools=/cluster/project8/vyp/vincent/Software/vcftools_0.1.12a/bin/vcftools
