@@ -8,7 +8,7 @@
 #$ -P vyp
 
 # Set the name of the job
-#$ -N singleVCF
+#$ -N extractVCF
 
 # Set the working directory 
 #$ -cwd
