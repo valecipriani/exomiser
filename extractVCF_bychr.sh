@@ -31,16 +31,17 @@ uclex_release=mainset_November2015
 infile=/scratch2/vyp-scratch2/vincent/GATK/${uclex_release}/${uclex_release}_chr${f}_filtered.vcf
 outfolder=/goon2/scratch2/vyp-scratch2/Cipriani_IoO/GATK/data/latestcalls
 
-vcftools=/cluster/project8/vyp/vincent/Software/vcftools_0.1.12a/bin/vcftools
+# vcftools=/cluster/project8/vyp/vincent/Software/vcftools_0.1.12a/bin/vcftools
 
-# sample=IoO_FFS_batch4_LC13186
+sample=IoO_FFS_batch4_LC13186
 # sample=IoO_FFS_batch4_XH13849
 
-for sample in `cat ${outfolder}/SampleList.txt`; do 
+# for sample in `cat ${outfolder}/SampleList.txt`; do 
 
-	${vcftools} --gzvcf ${infile} --recode --indv ${sample} --out ${outfolder}/${uclex_release}_${sample}_chr${f} 
-	${vcftools} --vcf ${outfolder}/${uclex_release}_${sample}_chr${f}.recode.vcf --non-ref-ac 1 --recode --out ${outfolder}/${uclex_release}_${sample}_chr${f}_clean
-done
+	vcftools --gzvcf ${infile} --recode --indv ${sample} --out ${outfolder}/${uclex_release}_${sample}_chr${f} 
+	vcftools --vcf ${outfolder}/${uclex_release}_${sample}_chr${f}.recode.vcf --non-ref-ac 1 --recode --out ${outfolder}/${uclex_release}_${sample}_chr${f}_clean
+
+# done
 
 
 
